@@ -1,7 +1,7 @@
 FROM maven:3.9.9-amazoncorretto-21-alpine AS build
 WORKDIR /app
 COPY ./pom.xml /app/pom.xml
-COPY ./src/main/java/com/blumbit/hospital_service/HospitalServiceApplication.java /app/src/main/java/com/blumbit/hospital_service/HospitalServiceApplication.java
+COPY ./src/main/java/com/blumbit/supermercado/SupermercadoApplication.java /app/src/main/java/com/blumbit/supermercado/SupermercadoApplication.java
 
 RUN mvn -f /app/pom.xml dependency:go-offline
 COPY . /app
